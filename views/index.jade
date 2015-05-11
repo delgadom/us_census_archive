@@ -1,0 +1,64 @@
+div(class='wrapper')
+  //- - var fs = require('fs');
+  //- - var data = require('data/census_data.json')
+  //- - var data = JSON.stringify(JSON.parse('data/census_data.json'))
+  
+  header
+    h1 US Census Archive
+    p Archive of data published in US Decennial Census reports, with user-contributed digital content
+    p(class='view'): a(href='https://github.com/delgadom/us_census_archive') View the Project on GitHub #[small delgadom/us_census_archive]
+  
+    ul
+      li: a(href='https://github.com/delgadom/us_census_archive/zipball/master') Download #[strong ZIP File]
+      li: a(href='https://github.com/delgadom/us_census_archive/tarball/master') Download #[strong TAR Ball]
+      li: a(href='https://github.com/delgadom/us_census_archive') View On #[strong GitHub]
+  
+  section
+  
+    h3: a(class='anchor', id='welcome-to-the-unofficial-us-census-archive', href='#welcome-to-the-unofficial-us-census-archive', aria-hidden='true') #[span(class='octicon octicon-link')] Welcome to the Unofficial US Census Archive
+    p This page hosts user-contributed resources, links, and data relating to the US Decennial Census. All data is free to use and distribute. If you like our work, pitch in!
+  
+    h3 #[a(id='census-data-explorer', class='anchor', href='#census-data-explorer', aria-hidden='true') #[span(class='octicon octicon-link')] Census Data Explorer]
+    p Access published census reports, OCR processed versions, and data tables by year and subject.
+
+    div(class='telescope-menu')
+      div(class='telescope-menu-header')
+        a(class='anchor', href='#explore-data-by-year', aria-hidden='true') Explore data by year
+      div(class='telescope-menu-content')
+        ul
+          - for (var year = 1940; year <= 2010; year += 10) {
+            li
+              div(class='telescope-menu')
+                div(class='telescope-menu-header')
+                  a(class='anchor', href='#explore-data-year_' + year, aria-hidden='true') #{year} Census Data
+                div(class='telescope-menu-content')
+                  ul
+                    li
+                      div(class='telescope-menu-header')
+                        a(class='anchor', href='#explore-data-year_' + year + '_coh', aria-hidden='true') Census of Housing
+                      div(class='telescope-menu-content')
+                        ul
+                          li: a(href='https://www.census.gov/prod/www/decennial.html#y' + year + 'house') Census.gov Report page
+                          li Table 1
+                          li Table 2
+                    li
+                      div(class='telescope-menu-header')
+                        a(class='anchor', href='#explore-data-year_' + year + '_cop', aria-hidden='true') Census of Population
+                      div(class='telescope-menu-content')
+                        ul
+                          li: a(href='https://www.census.gov/prod/www/decennial.html#y' + year + 'pop') Census.gov Report page
+                          li Table 1
+                          li Table 2
+          - }
+
+    h3: a(class='anchor', id='analysis', href='#analysis', aria-hidden='true') #[span(class='octicon octicon-link')] Analysis
+    p Data highlights and summaries of the US Census data.
+
+    h3: a(class='anchor', id='authors', href='#authors', aria-hidden='true') #[span(class='octicon octicon-link')] Authors and Contributors
+    p Please feel free to contribute to this repository by adding new tables and analyses. This repo is maintained by #[a(href="https://github.com/delgadom" class="user-mention") @delgadom].
+  footer
+    p This project is maintained by #[a(href="https://github.com/delgadom") delgadom]
+    p #[small Hosted on GitHub Pages &mdash; Theme by #[a(href="https://github.com/orderedlist") orderedlist]]
+
+script(src="javascripts/scale.fix.js")
+script(src="javascripts/collapsable.js")

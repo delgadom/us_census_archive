@@ -1,0 +1,27 @@
+{
+  "name": "us_census_archive",
+  "version": "0.0.0",
+  "description": "Unofficial repository of US Census historical data and analysis",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/delgadom/us_census_archive.git"
+  },
+  "keywords": [
+    "United",
+    "States",
+    "Census",
+    "population",
+    "housing",
+    "data"
+  ],
+  "author": "Michael Delgado",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/delgadom/us_census_archive/issues"
+  },
+  "homepage": "https://github.com/delgadom/us_census_archive"
+}
